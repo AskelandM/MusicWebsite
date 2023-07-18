@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<link rel="icon" href="images/icon.png">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>僕の好きな音楽</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./titlepage.css">
+    <link rel="stylesheet" href="./colorscheme.css">
+    <link rel="stylesheet" href="./dropdown.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="./jsmain.js"></script>
+  </head>
+  <body>
+    <!--   Title    -->
+    <div class="titleBox">
+      <div class="slideShow">
+        <div class="slide" id="makeImg">
+          <img src="ledzeppelin/images/album.jpg"   alt="Led Zeppelin 4">
+          <img src="cream/images/album.jpg"    alt="Disraeli Gears">
+          <img src="slayer/images/album.jpg"    alt="Reign in Blood">
+        </div>
+      </div>
+      <div class="slideShow">
+        <h1 class = "pageTitle">僕の好きな音楽<br>~ My Favorite Bands ~</h1>
+        <br><br><br>
+        <h3 class = "alignLeft">♫ And Did You Know. . . </h3>
+        <br><br><br>
+        <h3 class = "alignRight"> . . . Your Stairway Lies On The Whispering Wind ♫</h3>
+        <div style="clear: both;"></div>
+      </div>
+      <div class="dropmenu">
+        <ul class = "dropdown">
+          <li>
+            <div class = "menuButton">
+              <p class="no-margin">🈪 Menu</p>
+            </div>
+            <ul>
+              <li class = "cream"><a href="./cream/index.html">クリーム<br>Cream</a></li>   
+              <li class = "ledzep"><a href="./ledzeppelin/index.html">レッド・ツェッペリン<br>Led Zeppelin</a></li>
+              <li class = "megadeth"><a href="./megadeth/index.html">メガデス<br>MegadetH</a></li>
+              <li class = "slayer"><a href="./slayer/index.html">スレイヤー<br>Slayer</a></li>
+            </ul>
+          </li>
+        </ul> 
+      </div>
+      <div class="titleTxt">
+        <p>hint: certain member names reveal images when clicked!</p>
+        <h2 class="alignMiddle">Updates:</h2>
+        <p>・implemented cookies to store selected colors<br> between page loads<br><br><br><br><br><br><br><br></p>
+        <h2 class="alignMiddle">Color Pickers: (uses cookies)</h2>
+        <!-- background color picker -->
+        <div id="bg-picker-wrapper">
+          <label for="bg-picker"><a> background </a></label>
+          <input type="color" value="#8fffc5" id="bg-picker">
+        </div>
+        &nbsp;
+        <button id="changebgcolor" class = "button">random</button>
+        <button id="revertbgcolor" class="revert">revert</button>
+        <br>
+        <br>
+        <!-- accent color picker -->
+        <div id="accent-picker-wrapper">
+          <label for="accent-picker"><a> accent </a></label>
+          <input type="color" value="#bbbbbb" id="accent-picker">
+        </div>
+        &nbsp;
+        <button id="changeaccent" class="button">random</button>
+        <button id="revertaccent" class="revert">revert</button>
+        <br>
+        <br>
+        <!-- text color picker -->
+        <div id="text-picker-wrapper">
+          <label for="text-picker"><a> text </a></label>
+          <input type="color" value="#f1f1f3" id="text-picker">
+        </div>
+        &nbsp;
+        <button id="changetext" class="button">random</button>
+        <button id="reverttext" class="revert">revert</button>
+
+        <p><br></p>
+        <script type="text/javascript" src="./colorbuttons.js"></script>
+      </div>
+    </div>
+    <hr class = "no-margin">
+
+    <!-- footer -->
+    <div class="footer">
+      <p>
+        <div class="alignLeft">
+          by Morgan Askeland 2023
+        </div>
+        <div class="alignRight">
+          <a href="#top">上に戻る / return to top</a>
+        </div> 
+        <br>
+      </p>
+    </div>
+  </body>
+</html>

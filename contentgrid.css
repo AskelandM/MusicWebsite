@@ -1,0 +1,141 @@
+/* header grid */
+.header-container {
+    display: grid;
+    grid-template-columns: 25% auto auto auto 15%;
+    grid-template-rows: 100px;
+    text-align: center;
+    gap: 0;
+    margin: 0;
+    /* background-color: #c8d3fd0b; */
+    box-shadow: inset 0px 70px 50px var(--accentAlpha);
+    border-top: 5px solid var(--accentAlpha);
+    font-size: 1.8vw;
+}
+
+.logo {
+    grid-column: 1/2;
+}
+
+.logo > img {
+    object-fit: contain;
+    height: 100%;
+    max-width: 100%;
+    float: left;
+}
+
+.name {
+    grid-column: 2/3;
+    place-self: center;
+}
+
+.weblink {
+    grid-column: 3/4;
+    place-self: center;
+}
+
+.date {
+    grid-column: 4/5;
+    place-self: center;
+}
+
+.top{
+    grid-column: 5/6;
+    text-align: center;
+}
+
+
+/* content grid */
+.content-container {
+    display: grid;
+    grid-template-columns: 50px 450px 350px 50px;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+    "lBorder favDes favPic rBorder"
+    "lBorder memPic sidePic rBorder"
+    "lBorder memDes sidePic rBorder";
+    text-align: center;
+    gap: 0;
+    margin: 0;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.lBorder {
+    grid-area: lBorder;
+    background-image: url("./images/fireRight.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+    transform: scale(-1,-1);
+}
+
+.rBorder {
+    grid-area: rBorder;
+    background-image: url("./images/fireRight.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+}
+
+.favs {
+    grid-area: favDes;
+    /*border: 3px solid rgba(171, 255, 186, 0.8);*/
+    place-self: center;
+    word-break: break-all;
+    padding: 0;
+}
+
+.memberpic {
+    grid-area: memPic;
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+}
+
+.memberpic > img {
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+}
+
+.album {
+    grid-area: favPic;
+    /* border: 1px solid rgba(255, 255, 255, 0.8); */
+}
+
+.album > img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.memberdescrip {
+    grid-area: memDes;
+    padding-right: 10%;
+    padding-left: 10%;
+    justify-self: center;
+}
+
+.sidecolumn {
+    grid-area: sidePic;
+}
+
+.sidecolumn > img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/*overlay when hover*/
+.sideOL {
+    grid-area: sidePic;
+}
+
+.sideOL > img {
+    object-fit: contain;
+    height: 100%;
+    max-width: 100%;
+    opacity: 0;
+}
+
+.sideOL:hover > img {
+    opacity: 1;
+    z-index: 1;
+}
+

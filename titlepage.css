@@ -1,0 +1,132 @@
+/* slideshow uses https://webparts.cman.jp/img/slideshow/ */
+
+/* title page grid */
+.titleBox {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: max-content max-content;
+    grid-template-areas: 
+    "slideshow dropmenu"
+    "slideshow titleTxt";
+    margin: 0;
+}
+
+@media screen and (max-width:880px) {
+    .titleBox {
+        grid-template-columns: 100%;
+        grid-template-rows: 400px max-content max-content;
+        grid-template-areas: 
+        "slideshow"
+        "dropmenu"
+        "titleTxt";
+    }
+}    
+
+.dropmenu {
+    grid-area: dropmenu;
+    margin: 0;
+    text-align: center;
+}
+
+.titleTxt {
+    grid-area: titleTxt;
+    margin: 0;
+    justify-self: center;
+}
+
+input[type="color"] {
+	opacity: 0;
+	display: block;
+	border: none;
+    width: 100px;
+    cursor: url("./images/flying\ v.cur"), auto;
+}
+#bg-picker-wrapper {
+	float: left;
+    width: 100px;
+}
+#accent-picker-wrapper {
+	float: left;
+    width: 100px;
+}
+#text-picker-wrapper {
+	float: left;
+    width: 100px;
+}
+
+#revertbgcolor {
+    background: #2b213ace;
+    color: var(--txtColor);
+}
+
+
+#revertaccent {
+    border: #ea090959;
+    color: #ea0909;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#reverttext {
+    border: #f1f1f359;
+    color: #f1f1f3;
+    border-style: solid;
+    border-width: 2px;
+}
+
+
+.slideShow {
+    position: relative;
+    grid-area: slideshow;
+    margin: 0;
+    text-shadow: 0px 0px 3px var(--bgBlue), 0px 0px 10px var(--bgBlue);
+}
+
+.pageTitle {
+    position: relative;
+    text-align: center;
+    color: var(--accent2);
+    margin: 7%;
+    padding: 1%;
+    background-color: var(--bgBlue);
+    z-index: 1;
+}
+
+/* slideshow */
+ /*=== 画像の表示エリア ================================= */
+.slide {
+    position   : relative;
+    overflow   : hidden;
+                    /* 画像のサイズに合わせて変更ください */
+    height: 100%;
+    width: 100%;
+    margin     : auto;      /* サンプルは中央寄せの背景：白 */
+    background : var(--bgBlue);
+}
+ 
+ /*=== 画像の設定 ======================================= */
+.slide img {
+    display    : block;
+    position   : absolute;
+                      /* 画像のサイズを表示エリアに合せる */
+    object-fit: cover;
+    width      : inherit;
+    height     : inherit;
+    opacity    : 0;
+    animation  : slideAnime 27s ease infinite;
+    z-index: 0;
+}
+ 
+ /*=== スライドのアニメーションを段差で開始する ========= */
+.slide img:nth-of-type(1) { animation-delay: 0s }
+.slide img:nth-of-type(2) { animation-delay: 9s }
+.slide img:nth-of-type(3) { animation-delay: 18s }
+ 
+ /*=== スライドのアニメーション ========================= */
+@keyframes slideAnime{
+   0% { opacity: 0; transform: rotate(-180deg)}
+   2% { opacity: 1; transform: rotate(0deg)   }
+  31% { opacity: 1; transform: rotate(0deg)   }
+  33% { opacity: 0; transform: rotate(180deg) }
+ 100% { opacity: 0; transform: rotate(180deg) }
+}

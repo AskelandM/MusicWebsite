@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<link rel="icon" href="../images/icon.png">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>僕の好きな音楽</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="../contentgrid.css">
+    <link rel="stylesheet" href="../colorscheme.css">
+    <link rel="stylesheet" href="../dropdown.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="../jsmain.js"></script>
+  </head>
+  <body>
+    <!-- Slayer -->
+    <div id = "Slayer" class = "slayer">
+        <div class = "header-container">
+          <div class = "logo">
+            <img src="./images/logo.png">
+          </div>
+          <div class = "name">
+            <h2>スレイヤー<br>Slayer</h2>
+          </div>
+          <div class="weblink">
+            <a href = "https://slayer.net">
+              <h2>Website</h2>
+            </a>
+          </div>
+          <div class = "date">
+            <h2>1981-2018</h2>
+          </div>
+          <div class = "top">
+            <ul class = "dropdown">
+              <li>
+                <div class = "menuButton">
+                  <p class="no-margin"><br>🈪 Menu</p>
+                </div>
+                <ul>
+                  <li><a href="../index.html">メインページ<br>Main Page</a></li>
+                  <li class = "cream"><a href="../cream/index.html">クリーム<br>Cream</a></li>   
+                  <li class = "ledzep"><a href="../ledzeppelin/index.html">レッド・ツェッペリン<br>Led Zeppelin</a></li>
+                  <li class = "megadeth"><a href="../megadeth/index.html">メガデス<br>MegadetH</a></li>
+                  <li class = "slayer"><a href="../slayer/index.html">スレイヤー<br>Slayer</a></li>
+                </ul>
+              </li>
+            </ul> 
+          </div>
+        </div>
+        <!-- contents -->
+        <div class = "content-container">
+          <div class="lBorder"></div>
+          <div class="rBorder"></div>
+          <div class = "favs"> 
+            <p class="no-margin">好きなアルバム：
+            <br>An album I like: </p>
+            <h3 class="no-margin">Reign in Blood</h3>
+            <br>
+            <p class="no-margin">好きな曲：
+            <br>A song I like: </p>
+            <h3 class="no-margin">South of Heaven</h3>
+          </div>
+          <div class = "album">
+            <img src="./images/album.jpg"/>
+          </div>
+          <div class = "memberpic">
+            <img src="./images/members.jpg">
+          </div>
+          <div class = "memberdescrip">
+            <p>メンバー（左から）<a href="#note2">²</a><br>Members (from left)<a href="#note2">²</a></p>
+            <table>
+              <tr>
+                <td><a id="kerryButton">Kerry King</a></td>
+                <td>Guitar</td>
+              </tr>
+              <tr>
+                <td>Dave Lombardo</td>
+                <td>Drums</td>
+              </tr>
+              <tr>
+                <td>Jeff Hanneman</td>
+                <td>Guitar</td>
+              </tr>
+              <tr>
+                <td><a id="tomButton">Tom Araya</a></td>
+                <td>Bass/Vocals</td>
+              </tr>
+            </table>
+            <p><a id="slayerButton">revert image</a></p>
+          </div>
+          <script>
+            sideColReplace("tomButton", "slayerSide", "images/tom.jpg");
+            sideColReplace("kerryButton", "slayerSide", "images/kerry.jpg");
+            sideColReplace("slayerButton", "slayerSide", "images/hellawaits.jpg");
+          </script>
+          <div class = "sidecolumn">
+            <img class="slayerSide" src = "images/hellawaits.jpg">
+          </div>
+          <div class = "sideOL">
+            <img class="slayerSide" src = "images/hellawaits.jpg">
+          </div>
+        </div>
+      </div>
+
+    <div class = "notes">
+      <hr class="no-margin">
+      <h3 id = "Notes">脚注・Notes</h3>
+      <table>
+          <tr id="note2">
+              <td>2</td>
+              <td>Some members changed over time, so I chose my favorite lineup.<br>
+              メンバーが変わったこともあるので、自分が好きのを選びました。</td>
+          </tr>
+      </table>
+    </div>
+    <!-- footer -->
+    <hr>
+    <p class = "alignLeft">by Morgan Askeland 2023</p> 
+    <p class = "alignRight"><a href="../index.html">Main Page </a> </p>
+  </body>
+</html>
